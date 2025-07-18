@@ -1,10 +1,10 @@
 // Your existing projects data
 const projects = {
     "project-0":{
-        title: "AQMS CABUYAO",
-        description:"Features Description",
-        tools:["tool1","tool2"],
-        images:["Image-1","image-2"]
+        title: "IoT Based Air Quality Monitoring System",
+        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
+        tools:[ "Arduino IDE", "Visual Studio Code", ],
+        images:["assets/Image/Project-Image/project-0/0.png","assets/Image/Project-Image/project-0/1.png","assets/Image/Project-Image/project-0/2.png","assets/Image/Project-Image/project-0/3.png","assets/Image/Project-Image/project-0/4.png","assets/Image/Project-Image/project-0/5.png","assets/Image/Project-Image/project-0/6.png"]
     },
     "project-1":{
         title: "SMART ACCESS CONTROL AND MONITORING SYSTEM",
@@ -38,6 +38,7 @@ const projects = {
     }
 };
 
+
 // Function to populate project cards
 function populateProjectCards() {
     const projectsGrid = document.querySelector('.projects-grid');
@@ -49,33 +50,48 @@ function populateProjectCards() {
     }
     
     projectsGrid.innerHTML = ''; // Clear existing content
-    
+
+    const currentPage = window.location.pathname;
+    console.log(`Current Page: ${currentPage}`);
+    let limit;
+    const projectsArray = Object.entries(projects);
+
+    const projectPad = document.getElementById("projects");
+
+    //determine the limit of the card display
+    if (currentPage.includes("index.html")){
+        limit = 6;
+        projectPad.style.padding = "5rem";
+    }else if(currentPage.includes("projects.html")){
+        limit = projects.length;
+        projectPad.style.padding = "1rem";
+    }
+
+    const displayProjects = projectsArray.slice(0, limit);
     // Loop through projects and create cards
-    Object.keys(projects).forEach(projectKey => {
-        const project = projects[projectKey];
-        
-        // Create project card HTML
-        const projectCard = document.createElement('article');
-        projectCard.className = 'project-card';
-        
-        projectCard.innerHTML = `
-            <div class="project-image">
-                <img src="${project.images[0]}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div class="project-image-placeholder" style="display: none;"></div>
-            </div>
-            <div class="project-description">
-                <h3>${project.title}</h3>
-                <p>${project.description.substring(0, 100)}${project.description.length > 100 ? '...' : ''}</p>
-                <hr>
-                <p><b>Software Tools:</b></p>
-                <p>${project.tools}</p>
-            </div>
-            <button id="${projectKey}" class="project-button">View Project</button>
-        `;
-        
-        projectsGrid.appendChild(projectCard);
-    });
-    
+    displayProjects.forEach(([projectKey,project]) => {
+                // Create project card HTML
+                const projectCard = document.createElement('article');
+                projectCard.className = 'project-card';
+                
+                projectCard.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.images[0]}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="project-image-placeholder" style="display: none;"></div>
+                    </div>
+                    <div class="project-description">
+                        <h3>${project.title}</h3>
+                        <p>${project.description.substring(0, 100)}${project.description.length > 100 ? '...' : ''}</p>
+                        <hr>
+                        <p><b>Software Tools:</b></p>
+                        <p>${project.tools}</p>
+                    </div>
+                    <button id="${projectKey}" class="project-button">View Project</button>
+                `;
+                
+                projectsGrid.appendChild(projectCard);
+            });
+   
     // Re-attach event listeners after creating new buttons
     attachProjectButtonListeners();
 }

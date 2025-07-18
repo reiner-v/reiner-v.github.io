@@ -63,6 +63,12 @@ h3 {
 }
 .subHeader-1 {
   color: var(--primary);
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 0px 0px 0 var(--secondary);
+}
+.subHeader-2 {
+  color: var(--primary);
   font-size: 1.5rem;
   margin: 0;
   text-shadow: none;
@@ -74,6 +80,8 @@ header {
   position: relative;
   z-index: 10;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 nav {
@@ -192,6 +200,9 @@ nav ul li a:hover {
   color: var(--highlight-green);
   font-weight: 700;
 }
+.hero-buttons {
+  margin-bottom: 1rem;
+}
 
 /* .hero-content .hero-image-placeholder {
   width: 150px;
@@ -201,9 +212,71 @@ nav ul li a:hover {
   border-radius: 50%;
 } */
 
+.glitch-data {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.2em;
+  animation: glitch-data 1s 3;
+}
+
+.glitch-data::before {
+  content: "R3!N3R G4BR!3LL3 R. V4LD3Z";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--secondary);
+  animation: data-corruption 5s 3;
+  opacity: 0;
+}
+
+@keyframes glitch-data {
+  0%,
+  94%,
+  100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.2;
+  }
+  98% {
+    opacity: 1;
+  }
+}
+
+@keyframes data-corruption {
+  0%,
+  94%,
+  100% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  96% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 0.8;
+  }
+  98% {
+    opacity: 0;
+  }
+}
 /*===ABOUT COMPONENT===*/
 #about {
   text-align: center;
+  padding: 5rem;
 }
 
 .about-content {
@@ -230,8 +303,7 @@ nav ul li a:hover {
 /*===SKILLS COMPONENT===*/
 #skills {
   text-align: center;
-  margin-bottom: 8rem;
-  padding: 0.5rem 5rem;
+  padding: 5rem;
 }
 
 .skill-category h3 {
@@ -266,6 +338,7 @@ nav ul li a:hover {
   clip-path: polygon(100% 0, 100% 75%, 95% 100%, 0 100%, 0 0);
   box-shadow: 2px 2px 12px var(--secondary);
   border: solid 0.1rem var(--primary);
+  transition: transform 0.3s ease;
 }
 
 .skill-list li img {
@@ -273,12 +346,40 @@ nav ul li a:hover {
   vertical-align: middle;
   margin-right: 0.5rem;
 }
-/*FIX: need fixing box shadow/drop shadow won't work because of clip-path*/
+
+.certificates-list li:hover,
 .skill-list li:hover {
-  transform: translateY(-5px);
-  background: linear-gradient(135deg, var(--secondary), #5a448f);
+  background: linear-gradient(135deg, var(--secondary), #4e416b);
+  transform: scale(1.03);
+}
+.certificates-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 2rem 2rem;
 }
 
+.certificates-list li {
+  padding: 0.5rem;
+  background-color: var(--secondary);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex-basis: 30%;
+  box-sizing: border-box;
+  min-width: 150px;
+  box-shadow: 2px 2px 12px var(--secondary);
+  border: solid 0.1rem var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.certificates-list li img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
 /*===PROJECTS===*/
 #projects {
   text-align: center;
@@ -555,7 +656,7 @@ nav ul li a:hover {
 /*===CONTANCT COMPONENT*/
 #contacts {
   text-align: center;
-  padding: 12rem 5rem;
+  padding: 5rem;
 }
 
 .contacts-content {
@@ -714,14 +815,41 @@ footer p {
   box-shadow: 0px 0px 12px 2px var(--secondary);
   transition: background-color 0.5s ease;
 }
+#download-btn-cv:hover,
 #download-btn-report:hover {
   color: var(--text-color);
   background-color: var(--primary);
   transform: scale(1.03);
 }
-#download-btn-cv:hover {
+
+#linkedIn-link-0 img,
+#github-link img {
+  width: 2rem;
+  border-radius: 4px;
+}
+#linkedIn-link-0 img:hover,
+#github-link img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 12px 2px var(--secondary);
+}
+
+#show-btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--default-bg);
+  color: var(--secondary);
+  border: solid 0.15rem var(--secondary);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0px 0px 12px 2px var(--secondary);
+  transition: background-color 0.5s ease;
+}
+#show-btn:hover {
   color: var(--text-color);
-  background-color: var(--primary);
+  background-color: var(--secondary);
   transform: scale(1.03);
 }
 /* ===RESPONSIVE DESIGN - MOBILE FIRST=== */

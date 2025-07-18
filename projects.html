@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiner Valdez - Portfolio</title>
+    <link rel="icon" href="assets/Image/GreenLogo_Dark.png">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=IBM+Plex+Mono&family=Kode+Mono"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- <img id="logo" alt="Reiner Valdez Logo" /> -->
+            <h3><a href="index.html">REINER VALDEZ</a></h3>
+            <ul>
+                <li><a href="index.html">Go Back</a></li>
+                <li> <button class="theme-toggle" onclick="toggleTheme()">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Dark</span>
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-wrapper">
+        <main>
+            <section id="projects">
+                <h2> <span>
+                        <p class="subHeader-2">-Checkout my Projects-</p>
+                    </span>PROJECTS</h2>
+                <div class="projects-grid">
+                </div>
+                <a id="show-btn" href="index.html">Go Back</a>
+            </section>
+        </main>
+        <!-- MODAL: PROJECT -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h4 id="project-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="projectModal-text">
+                        <h3>Description:</h3>
+                        <p id="project-desc"></p>
+                        <h3>Software Tools:</h3>
+                        <ul id="project-tools"></ul>
+                    </div>
+                    <div id="project-images" class="projectModal-image-placeholder">
+                        x
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="themeToggle.js"></script>
+</body>
+
+</html>
