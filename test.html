@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontally Scrollable Chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <style>
+        .container-content {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .scrollable-chart-wrapper {
+            width: 100%;
+            height: 350px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px;
+        }
+
+        #selected-aqiTrend-chart {
+            width: 1200px !important;
+            /* Fixed width larger than container */
+            height: 300px !important;
+        }
+
+        /* Custom scrollbar styling */
+        .scrollable-chart-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scrollable-chart-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .scrollable-chart-wrapper::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .scrollable-chart-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .controls {
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <button onclick="addData()">Add More Data Points</button>
+        <button onclick="removeData()">Remove Data Points</button>
+        <button onclick="resetChart()">Reset Chart</button>
+    </div>
+
+    <div class="container-content">
+        <div class="scrollable-chart-wrapper">
+            <canvas id="selected-aqiTrend-chart" width="1200" height="300"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let chart;
+        let initialData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'AQI Trend',
+                data: [45, 52, 38, 67, 89, 76, 54, 43, 59, 82, 71, 48],
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        };
+
+        function createChart() {
+            const ctx = document.getElementById('selected-aqiTrend-chart').getContext('2d');
+
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: JSON.parse(JSON.stringify(initialData)),
+                options: {
+                    responsive: false, // Important: disable responsive to maintain fixed width
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            beginAtZero: true,
+                            max: 100,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'AQI Value'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Time Period'
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Air Quality Index Trend (Horizontally Scrollable)'
+                    }
+                }
+            });
+        }
+
+        function addData() {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const currentLength = chart.data.labels.length;
+
+            // Add more data points
+            for (let i = 0; i < 6; i++) {
+                chart.data.labels.push(months[(currentLength + i) % 12] + ' Y' + Math.floor((currentLength + i) / 12 + 2));
+                chart.data.datasets[0].data.push(Math.floor(Math.random() * 100));
+            }
+
+            chart.update();
+        }
+
+        function removeData() {
+            if (chart.data.labels.length > 6) {
+                chart.data.labels.splice(-6, 6);
+                chart.data.datasets[0].data.splice(-6, 6);
+                chart.update();
+            }
+        }
+
+        function resetChart() {
+            chart.data.labels = [...initialData.labels];
+            chart.data.datasets[0].data = [...initialData.datasets[0].data];
+            chart.update();
+        }
+
+        // Initialize the chart when the page loads
+        window.onload = function () {
+            createChart();
+        };
+    </script>
+</body>
+
+</html>
