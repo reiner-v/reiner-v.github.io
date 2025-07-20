@@ -942,10 +942,10 @@ footer p {
   }
 
   /* Modal adjustments */
-  .modal-content {
+  /* .modal-content {
     width: 95%;
     margin: 5% auto;
-  }
+  } */
 
   #project-modal .modal-body {
     flex-direction: column;
@@ -1218,13 +1218,13 @@ img {
 
 /* Better touch targets for mobile */
 @media screen and (max-width: 768px) {
-  button,
+  /* button,
   .project-button,
   #download-btn-cv,
   #contact-btn {
     min-height: 44px;
     min-width: 44px;
-  }
+  } */
 
   nav ul li a {
     padding: 0.5rem;
