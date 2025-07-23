@@ -1,26 +1,5 @@
- function toggleTheme() {
-            const html = document.documentElement;
-            const themeToggle = document.querySelector('.theme-toggle');
-            const themeIcon = document.querySelector('.theme-icon');
-            const themeText = document.querySelector('.theme-text');
-            
-            // Check current theme
-            const currentTheme = html.getAttribute('data-theme');
-            
-            if (currentTheme === 'dark') {
-                // Switch to light mode
-                html.removeAttribute('data-theme');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-            } else {
-                // Switch to dark mode
-                html.setAttribute('data-theme', 'dark');
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-            }
-        }
 
-        // Optional: Remember user's theme preference
+        // Remember user's theme preference
         function initializeTheme() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
