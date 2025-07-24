@@ -57,11 +57,14 @@ function populateProjectCards() {
     const projectsArray = Object.entries(projects);
 
     const projectPad = document.getElementById("projects");
-
+    const mediaQuery = window.matchMedia('(max-width: 480px)')
     //determine the limit of the card display
     if (currentPage.includes("index.html")){
         limit = 6;
         projectPad.style.padding = "5rem";
+        if(mediaQuery.matches){
+            projectPad.style.padding = "0";
+        }
     }else if(currentPage.includes("projects.html")){
         limit = projects.length;
         projectPad.style.padding = "1rem";
