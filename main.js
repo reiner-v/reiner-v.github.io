@@ -1,41 +1,53 @@
 // Your existing projects data
 const projects = {
-    "project-0":{
+     "project-0":{
+        title: "iNeed Parking Application",
+        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
+        tools:[ "Android Studio", "Visual Studio Code","MongoDB"],
+        images:["assets/Image/Project-Image/project-0/1.png","assets/Image/Project-Image/project-0/2.png","assets/Image/Project-Image/project-0/3.png","assets/Image/Project-Image/project-0/5-1.png","assets/Image/Project-Image/project-0/5-2.png","assets/Image/Project-Image/project-0/5-3.png"]
+    },
+    "project-1":{
         title: "IoT Based Air Quality Monitoring System",
         description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
         tools:[ "Arduino IDE", "Visual Studio Code", ],
-        images:["assets/Image/Project-Image/project-0/0.png","assets/Image/Project-Image/project-0/1.png","assets/Image/Project-Image/project-0/2.png","assets/Image/Project-Image/project-0/3.png","assets/Image/Project-Image/project-0/4.png","assets/Image/Project-Image/project-0/5.png","assets/Image/Project-Image/project-0/6.png"]
+        images:["assets/Image/Project-Image/project-1/0.png","assets/Image/Project-Image/project-1/1.png","assets/Image/Project-Image/project-1/2.png","assets/Image/Project-Image/project-1/3.png","assets/Image/Project-Image/project-1/4.png","assets/Image/Project-Image/project-1/5.png","assets/Image/Project-Image/project-1/6.png"]
     },
-    "project-1":{
+    "project-2":{
         title: "SMART ACCESS CONTROL AND MONITORING SYSTEM",
         description:"This project incorporates an RFID sensor and key to authenticate authorized persons within an establishment. When an authorized UID is scanned by the RFID, a green light will turn on. If the sensor detects an unauthorized attempt, a red light will turn on, and the alarm system will engage.",
         tools:["Visual Studio Community","xampp","PhpMyAdmin","ArduinoIDE"],
-        images:["assets/Image/Project-Image/project-1/0.png","assets/Image/Project-Image/project-1/1.png","assets/Image/Project-Image/project-1/2.png","assets/Image/Project-Image/project-1/3.png","assets/Image/Project-Image/project-1/4.png","assets/Image/Project-Image/project-1/5.png"]
+        images:["assets/Image/Project-Image/project-2/0.png","assets/Image/Project-Image/project-2/1.png","assets/Image/Project-Image/project-2/2.png","assets/Image/Project-Image/project-2/3.png","assets/Image/Project-Image/project-2/4.png","assets/Image/Project-Image/project-2/5.png"]
     },
-    "project-2":{
+    "project-3":{
         title: "LIGHT MOTION SENSOR WITH MANUAL OVERRIDE",
         description:"This project aims to assist in illuminating areas automatically or manually based on the user's preference and records data each time the LDR detects a change in light levels.",
         tools:["Visual Studio Community","xampp","PhpMyAdmin","ArduinoIDE"],
-        images:["assets/Image/Project-Image/project-2/1.png","assets/Image/Project-Image/project-2/2.png"]
+        images:["assets/Image/Project-Image/project-3/1.png","assets/Image/Project-Image/project-3/2.png"]
     },
-    "project-3":{
+    "project-4":{
         title: "LEHITIMO: Get that Salary",
         description:"This Project will allow the admin to create and update the employees information including name, roles, salary and such. They will be also to search for a specific employee also delete an employee.",
         tools:["Visual Studio Community","xampp","PhpMyAdmin"],
-        images:["assets/Image/Project-Image/project-3/1.png","assets/Image/Project-Image/project-3/2.png","assets/Image/Project-Image/project-3/3.png","assets/Image/Project-Image/project-3/4.png","assets/Image/Project-Image/project-3/5.png","assets/Image/Project-Image/project-3/6.png","assets/Image/Project-Image/project-3/7.png","assets/Image/Project-Image/project-3/8.png","assets/Image/Project-Image/project-3/9.png"]
+        images:["assets/Image/Project-Image/project-4/1.png","assets/Image/Project-Image/project-4/2.png","assets/Image/Project-Image/project-4/3.png","assets/Image/Project-Image/project-4/4.png","assets/Image/Project-Image/project-4/5.png","assets/Image/Project-Image/project-4/6.png","assets/Image/Project-Image/project-4/7.png","assets/Image/Project-Image/project-4/8.png","assets/Image/Project-Image/project-4/9.png"]
     },
-    "project-4":{
+    "project-5":{
         title: "RENTALIGHT: ONLINE RESERVATION",
         description:"This Online Application and Reservation System simplifies finding and booking properties. Clients can easily register, find properties, make reservations, manage cancellations, and track their booking status.",
         tools:["Visual Studio Community","SQL Database"],
-        images:["assets/Image/Project-Image/project-4/1.png","assets/Image/Project-Image/project-4/2.png","assets/Image/Project-Image/project-4/3.png"]
+        images:["assets/Image/Project-Image/project-5/1.png","assets/Image/Project-Image/project-5/2.png","assets/Image/Project-Image/project-5/3.png"]
     },
-    "project-5":{
+    "project-6":{
         title: "ABC COMPANY: MANAGE EMPLOYEE",
         description:"This system offers streamlined employee management, covering everything from adding and updating employee details, managing payroll and positions, to organizing departments.",
         tools:["PyCharm"],
-        images:["assets/Image/Project-Image/project-5/1.png","assets/Image/Project-Image/project-5/2.png","assets/Image/Project-Image/project-5/3.png","assets/Image/Project-Image/project-5/4.png","assets/Image/Project-Image/project-5/5.png","assets/Image/Project-Image/project-5/6.png"]
-    }
+        images:["assets/Image/Project-Image/project-6/1.png","assets/Image/Project-Image/project-6/2.png","assets/Image/Project-Image/project-6/3.png","assets/Image/Project-Image/project-6/4.png","assets/Image/Project-Image/project-6/5.png","assets/Image/Project-Image/project-6/6.png"]
+    },
+     "project-7":{
+        title: "Jumble Word Game: A Happy Place",
+        description:"This Game Project is developed on the platform of windows form. It has a leaderboard and creation of player by inputting a name to continue to play. Each level will increase the difficulty as the word gets longer.",
+        tools:["Visual Studio Community"],
+        images:["assets/Image/Project-Image/project-7/0.png","assets/Image/Project-Image/project-7/1.png","assets/Image/Project-Image/project-7/2.png"]
+    },
 };
 
 
@@ -52,7 +64,6 @@ function populateProjectCards() {
     projectsGrid.innerHTML = ''; // Clear existing content
 
     const currentPage = window.location.pathname;
-    console.log(`Current Page: ${currentPage}`);
     let limit;
     const projectsArray = Object.entries(projects);
 
@@ -76,7 +87,7 @@ function populateProjectCards() {
                 // Create project card HTML
                 const projectCard = document.createElement('article');
                 projectCard.className = 'project-card';
-                
+                console.log(`DEBUG: ${project.image}`);
                 projectCard.innerHTML = `
                     <div class="project-image">
                         <img src="${project.images[0]}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -87,7 +98,7 @@ function populateProjectCards() {
                         <p>${project.description.substring(0, 100)}${project.description.length > 100 ? '...' : ''}</p>
                         <hr>
                         <p><b>Software Tools:</b></p>
-                        <p>${project.tools}</p>
+                        <ul>${project.tools.map(tool => `<li>${tool}</li>`).join('')}</ul>
                     </div>
                     <button id="${projectKey}" class="project-button">View Project</button>
                 `;
