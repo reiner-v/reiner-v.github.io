@@ -2,7 +2,7 @@
 const projects = {
      "project-0":{
         title: "iNeed Parking Application",
-        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
+        description:"This Project is parking management implementing a  user session control, in-chat message and real time location.",
         tools:[ "Android Studio", "Visual Studio Code","MongoDB"],
         images:["assets/Image/Project-Image/project-0/1.png","assets/Image/Project-Image/project-0/2.png","assets/Image/Project-Image/project-0/3.png","assets/Image/Project-Image/project-0/5-1.png","assets/Image/Project-Image/project-0/5-2.png","assets/Image/Project-Image/project-0/5-3.png"]
     },
