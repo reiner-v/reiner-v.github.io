@@ -292,7 +292,6 @@
 
     window.addEventListener('load', function () {
         if (!sessionStorage.getItem('loaded')) {
-            document.body.style.overflow = 'hidden';
             displayPre = setTimeout(showPage, 3000);
             sessionStorage.setItem('loaded', 'true');
         } else {
