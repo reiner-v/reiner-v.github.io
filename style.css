@@ -85,10 +85,7 @@
     transform: rotate(360deg);
   }
 }
-html {
-  pointer-events: none;
-  user-select: none;
-}
+
 body {
   font-family: "IBM Plex Mono", monospace;
   color: var(--text-color);
