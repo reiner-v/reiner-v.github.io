@@ -70,7 +70,7 @@ function populateProjectCards() {
     const projectPad = document.getElementById("projects");
     const mediaQuery = window.matchMedia('(max-width: 480px)')
     //determine the limit of the card display
-    if (currentPage.includes("index.html")){
+    if (!currentPage.includes("projects.html")){
         limit = 6;
         projectPad.style.padding = "5rem 2rem";
         if(mediaQuery.matches){
