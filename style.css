@@ -93,6 +93,7 @@ body {
   background: var(--bg-gradient);
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .page-wrapper {
