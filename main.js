@@ -1,6 +1,5 @@
 // Your existing projects data
 const projects = {
-    
      "project-7":{
         title: "iNeed Parking Application",
         description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
@@ -43,7 +42,12 @@ const projects = {
         tools:["PyCharm"],
         images:["assets/Image/Project-Image/project-1/1.png","assets/Image/Project-Image/project-1/2.png","assets/Image/Project-Image/project-1/3.png","assets/Image/Project-Image/project-1/4.png","assets/Image/Project-Image/project-1/5.png","assets/Image/Project-Image/project-1/6.png"]
     },
-
+     "project-0":{
+        title: "Jumble Word Game: A Happy Place",
+        description:"This Game Project is developed on the platform of windows form. It has a leaderboard and creation of player by inputting a name to continue to play. Each level will increase the difficulty as the word gets longer.",
+        tools:["Visual Studio Community"],
+        images:["assets/Image/Project-Image/project-0/0.png","assets/Image/Project-Image/project-0/1.png","assets/Image/Project-Image/project-0/2.png"]
+    },
 };
 
 
