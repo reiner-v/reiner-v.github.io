@@ -1,21 +1,27 @@
 // Your existing projects data
 const projects = {
+    "project-8":{
+        title: "My Portfolio v1",
+        description:"A dedicated effort to design and implement a functional and efficient code. Focusing on HTML and CSS combined with JavaScript to show a site that is effective and visual.",
+        tools:["Visual Studio Code","HTML","CSS","JavaScript"],
+        images:["assets/Image/Project-Image/project-8/0.png","assets/Image/Project-Image/project-8/1.png","assets/Image/Project-Image/project-8/2.png","assets/Image/Project-Image/project-8/3.png","assets/Image/Project-Image/project-8/4.png","assets/Image/Project-Image/project-8/5.png"]
+    },
      "project-7":{
         title: "iNeed Parking Application",
-        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
-        tools:[ "Android Studio", "Visual Studio Code","MongoDB"],
+        description:"This is a mobile and web application for parking management. Implementing various features assisting the user including available parking space, real-time location, payment, and chat messages.",
+        tools:[ "Android Studio", "Visual Studio Code","MongoDB","Flutter"],
         images:["assets/Image/Project-Image/project-7/1.png","assets/Image/Project-Image/project-7/2.png","assets/Image/Project-Image/project-7/3.png","assets/Image/Project-Image/project-7/5-1.png","assets/Image/Project-Image/project-7/5-2.png","assets/Image/Project-Image/project-7/5-3.png"]
     },
     "project-6":{
         title: "IOT BASED AIR QUALIT MONITORING SYSTEM",
         description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
-        tools:[ "Arduino IDE", "Visual Studio Code", ],
+        tools:[ "Arduino IDE", "Visual Studio Code","HTML","CSS","JavaScript" ],
         images:["assets/Image/Project-Image/project-6/0.png","assets/Image/Project-Image/project-6/1.png","assets/Image/Project-Image/project-6/2.png","assets/Image/Project-Image/project-6/3.png","assets/Image/Project-Image/project-6/4.png","assets/Image/Project-Image/project-6/5.png","assets/Image/Project-Image/project-6/6.png"]
     },
     "project-5":{
         title: "SMART ACCESS CONTROL AND MONITORING SYSTEM",
         description:"This project incorporates an RFID sensor and key to authenticate authorized persons within an establishment. When an authorized UID is scanned by the RFID, a green light will turn on. If the sensor detects an unauthorized attempt, a red light will turn on, and the alarm system will engage.",
-        tools:["Visual Studio Community","xampp","PhpMyAdmin","ArduinoIDE"],
+        tools:["Visual Studio Community","Xampp","PhpMyAdmin","ArduinoIDE"],
         images:["assets/Image/Project-Image/project-5/0.png","assets/Image/Project-Image/project-5/1.png","assets/Image/Project-Image/project-5/2.png","assets/Image/Project-Image/project-5/3.png","assets/Image/Project-Image/project-5/4.png","assets/Image/Project-Image/project-5/5.png"]
     },
     "project-4":{
