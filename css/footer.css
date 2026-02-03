@@ -1,0 +1,36 @@
+footer {
+  background: var(--secondary);
+  padding: 15px 20px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 20px;
+  height: 100%;
+  background: var(--bg-default);
+  transform: skewX(-20deg);
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 80px;
+  width: 20px;
+  height: 100%;
+  background: var(--bg-default);
+  transform: skewX(-20deg);
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}

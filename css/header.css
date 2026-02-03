@@ -1,0 +1,198 @@
+/*Header Styles*/
+
+header {
+  background-color: var(--bg-default);
+  padding: 0.8em 1em;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+/*NOTE: Animate hover name*/
+
+.brand__name {
+  color: var(--primary);
+  font-family: "Chivo Mono", monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+.brand__name--long {
+  display: none;
+}
+
+.brand__logo {
+  width: 2em;
+  height: auto;
+  margin-right: 0.5em;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-left: auto;
+}
+
+/*NAVIGATION=======*/
+.curtain-menu__overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: var(--primary);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/*NOTE: ADD little bg for menu e.g logo or smoke*/
+.curtain-menu__content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  margin: 1em 0 0 2em;
+}
+.curtain-menu__content:last-child {
+  margin: 0.8em;
+}
+
+.curtain-menu__close {
+  text-decoration: none;
+  color: var(--secondary);
+  position: absolute;
+  top: 0em;
+  right: 0.2em;
+  font-size: 4rem;
+  transition: transform linear 0.2s;
+}
+.curtain-menu__close:hover {
+  transform: rotate(90deg);
+}
+
+.curtain-menu--open {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 600;
+  gap: 1em;
+}
+
+.navbar__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__item {
+  margin: 0 0 0.25em 0;
+}
+
+.navbar__link {
+  color: var(--secondary);
+  font-size: 2rem;
+  transition: color ease-out 0.5s;
+}
+
+.navbar__link:hover {
+  text-decoration: overline;
+  color: var(--highlight-purple);
+  font-weight: 700;
+}
+
+.theme-toggle {
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  /* margin: auto; */
+}
+.theme-toggle__input {
+  display: none;
+}
+.theme-toggle__icon {
+  display: inline-block;
+  transition: transform linear 0.8s;
+}
+.theme-toggle__icon:hover {
+  transform: rotateY(180deg);
+}
+
+.theme-toggle__icon:active {
+  transform: scale(0.1) rotateY(-180deg);
+}
+
+/*==============RESPONSIVE*/
+/*Tablet*/
+@media (min-width: 600px) {
+  /* .brand__logo {
+    width: 4px;
+  } */
+}
+
+/*Desktop*/
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0.8em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 95;
+  }
+  .brand {
+    flex-grow: 1;
+  }
+
+  .brand__logo {
+    width: 2.5em;
+  }
+  .brand__name {
+    font-size: 1.5rem;
+  }
+  .brand__name--short {
+    display: none;
+  }
+  .brand__name--long {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  .curtain-menu__overlay {
+    display: contents;
+  }
+  .curtain-menu__content {
+    position: static;
+    margin: 0;
+    width: auto;
+  }
+
+  .curtain-menu__content:last-child {
+    margin: 0;
+  }
+  .curtain-menu__close {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-grow: 3;
+    justify-content: flex-end;
+  }
+  .navbar__item {
+    display: inline;
+    margin-right: 1em;
+  }
+  .navbar__link {
+    font-size: 1.2rem;
+  }
+}

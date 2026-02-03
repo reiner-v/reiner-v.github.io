@@ -1,307 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
 
 <head>
+    <title>Reiner Valdez - Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Add more Meta for SEO-->
+    <meta property="og:title" content="Reiner Valdez | Web Developer">
+    <meta property="og:description" content="An Aspring Web Developer. IT Graduate & Software Developer.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://reiner-v.github.io/">
     <meta name="keywords"
-        content="HTML, CSS, JavaScript, Reiner, Reiner Valdez,Portfolio, Web Development, Web Developer">
-    <meta name="description"
-        content="Reiner Valdez - Aspiring Software Developer specializing in C#, Flutter, PHP, and JavaScript. 4th-year IT student creating impactful digital solutions.">
-    <title>Reiner Valdez - Portfolio</title>
-    <link rel="icon" href="assets/Image/Logo.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kode+Mono:wght@400..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        content="HTML, CSS, JavaScript,C#, Reiner, Reiner Valdez,Portfolio, Web Development, Web Developer">
+
+    <link rel="icon" type="icon/png" href="assets/images/logo/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/loadingScreen.css">
+
+
 </head>
 
 <body>
     <div class="loadingScreen">
-        <img src="assets/Image/LoadingPage/Lp-2-T1.png" />
-        <img class="mask" src="assets/Image/LoadingPage/Lp-2-M0.png" />
-        <img class="mask" src="assets/Image/LoadingPage/Lp-2-M1.png" />
-        <img src="assets/Image/LoadingPage/Lp-3-B1.png" />
-        <img src="assets/Image/LoadingPage/Lp-4-T1.png" />
-        <img src="assets/Image/LoadingPage/Lp-5.png" />
-        <img src="assets/Image/LoadingPage/Lp-6-S0.png" />
-        <img src="assets/Image/LoadingPage/Lp-6-S1.png" />
-        <img src="assets/Image/LoadingPage/Lp-6-S2.png" />
+        <img src="assets/images/loading-page/Lp-2-T1.webp" />
+        <img class="mask" src="assets/images/loading-page/Lp-2-M0.webp" />
+        <img class="mask" src="assets/images/loading-page/Lp-2-M1.webp" />
+        <img src="assets/images/loading-page/Lp-3-B1.webp" />
+        <img src="assets/images/loading-page/Lp-4-T1.webp" />
+        <img src="assets/images/loading-page/Lp-5.webp" />
+        <img src="assets/images/loading-page/Lp-6-S0.webp" />
+        <img src="assets/images/loading-page/Lp-6-S1.webp" />
+        <img src="assets/images/loading-page/Lp-6-S2.webp" />
         <div class="filter"></div>
         <div class="loadingSparkle"></div>
     </div>
+    <header>
+        <div class="brand">
+            <a href="#hero"><img src="assets/images/logo/logo.png" class="brand__logo" alt="Reiner Valdez brand" srcset="assets/images/logo/logo-sm.png 100w,
+        assets/images/logo/logo-md.png 200w"></a>
+            <a href="#hero">
+                <span class="brand__name brand__name--short">RV</span>
+                <span class="brand__name brand__name--long">REINER VALDEZ</span>
+            </a>
+            <p class="menu-toggle" onclick="openNav()">&#x2630;</p>
 
-    <div class="bg">
-        <header>
-            <nav>
-                <!-- <img id="logo" alt="Reiner Valdez Logo" /> -->
-                <h3><a href="#hero">REINER VALDEZ</a></h3>
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contacts">CONTACTS</a></li>
-                    <li> <button class="theme-toggle" onclick="toggleTheme()">
-                            <span class="theme-icon">🌙</span>
-                            <span class="theme-text">Dark</span>
-                        </button></li>
+        </div>
+        <div id="curtain-menu" class="curtain-menu__overlay"> <!--???:curtain-menu__overlay-->
+            <a href="javascript:void(0)" class="curtain-menu__close" onclick="closeNav()">&times;</a>
+            <nav class="navbar curtain-menu__content">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a class="navbar__link" href="#about">ABOUT</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#skills">SKILLS</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#projects">PROJECTS</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contacts">CONTACTS</a></li>
                 </ul>
             </nav>
-
-        </header>
-        <div class="bd-text t-1 r-1">MY PORTFOLIO</div>
-        <div class="bd-text t-2 l-1">INTRODUCTION</div>
-        <div class="bd-text t-3 r-1">PROFILE</div>
-        <div class="page-wrapper">
-            <main>
-                <section id="hero">
-                    <div class="hero-content">
-                        <h5>Greetings! :> My name is</h5>
-                        <h1 class="glitch-data layers" data-text="REINER GABRIELLE
-                            R.VALDEZ"><span>REINER GABRIELLE
-                                R.VALDEZ</span>
-                        </h1>
-                        <p>An aspiring <b>Software Developer</b> passionate to build a <b>reliable and efficient
-                                system</b>
-                            that
-                            <b>solves
-                                real-world problems</b>. Dedicated to <b>write clean, maintainable and scalable
-                                code</b>.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="assets/File/CV - Reiner Gabrielle R. Valdez.pdf" target="_blank"
-                                id="download-btn-cv">Download
-                                CV</a>
-                            <a href="#contacts" id="contacts-btn">CONTACTS</a>
-                        </div>
-
-                        <a id="github-link" href="https://github.com/reiner-v" target="_blank"><img
-                                src="assets/Image/Icon/github.png"></a>
-                        <a id="linkedIn-link-0" href="https://www.linkedin.com/in/reiner-valdez-1aa485344/"
-                            target="_blank"><img src="assets/Image/Icon/linkedin.png"></a>
-                    </div>
-                </section>
-
-                <section id="about">
-                    <h2><span>
-                            <p class="subHeader-2">-Get to know me-</p>
-                        </span>ABOUT ME</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <div class="card-float">
-                                <img src="assets/Image/Icon/ic_profile.png" />
-                                <p>
-                                    I'm Reiner Gabrielle R. Valdez, a 4th-year
-                                    Information Technology student at Mapua Malayan
-                                    Colleges Laguna, passionate about transforming digital ideas into visually appealing
-                                    and
-                                    highly functional user experiences. My academic focus includes software development,
-                                    data
-                                    structures, and system design, complemented by hands-on experience in building
-                                    responsive
-                                    websites, mobile applications, and robust backend systems using technologies like
-                                    C#,
-                                    HTML,
-                                    CSS, Javascript, Flutter, Php, and SQL.
-                                </p>
-                            </div>
-                            <div class="card-float anm-slideDown-2">
-                                <img src="assets/Image/Icon/ic_goal.png" />
-                                <p>
-                                    I'm driven by curiosity for learning and continuously explore new tools and
-                                    techniques
-                                    to tackle real-world challenges with innovative solutions. My goal is to craft
-                                    intuitive
-                                    user interfaces and reliable backends that deliver seamless experiences for users.
-                                </p>
-                            </div>
-                            <div class="card-float anm-slideDown-3">
-                                <img src="assets/Image/Icon/ic_interest.png" />
-                                <p>
-                                    Beyond coding, I enjoy reading mystery and fantasy novels, playing strategy-based
-                                    games,
-                                    and sketching—hobbies that sharpen my creativity and problem-solving skills. I'm
-                                    excited
-                                    to apply my technical expertise and creative mindset to impactful projects while
-                                    also
-                                    gaining knowledge and experience. </p>
-                            </div>
-                        </div>
-                        <div class="about-image-placeholder">
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 0.png" />
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 1.png" />
-                            <img class="img-layer display-block" src="assets/Image/about-me-layer/layer 2 - C0.png" />
-                            <img class="img-layer display-none" src="assets/Image/about-me-layer/layer 2 - C1.png" />
-                            <img class="img-layer display-block" src="assets/Image/about-me-layer/layer 2 - D0.png" />
-                            <img class="img-layer display-none" src="assets/Image/about-me-layer/layer 2 - D1.png" />
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 3.png" />
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 4.png" />
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 5.png" />
-                            <img class="img-layer" src="assets/Image/about-me-layer/layer 6.png" />
-                        </div>
-                    </div>
-                </section>
-
-                <section id="skills">
-                    <h2><span>
-                            <p class="subHeader-2">-Overview of My Technological Abilities-</p>
-                        </span>MY SKILLS
-                    </h2>
-                    <div class="skills-grid">
-                        <h3>
-                            <p class="subHeader-1">TECHNOLOGIES I USE</p>
-                        </h3>
-                        <div class="skill-category">
-                            <h3>PROGRAMMING LANGUAGES</h3>
-                            <ul class="skill-list">
-                                <li><img src="assets/Image/Logo/language/logo_csharp.svg" />C#</li>
-                                <li><img src="assets/Image/Logo/language/logo_python.svg" />Python</li>
-                                <li><img src="assets/Image/Logo/language/logo_dart.svg" />Dart</li>
-                                <li><img src="assets/Image/Logo/language/logo_php.svg" />Php</li>
-                                <li><img src="assets/Image/Logo/language/logo_js.svg" />Javascript</li>
-                                <li><img src="assets/Image/Logo/language/logo_java.svg" />Java</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>DATABASES</h3>
-                            <ul class="skill-list">
-                                <li><img src="assets/Image/Logo/database/logo_mysql.svg" />MySQL</li>
-                                <li><img src="assets/Image/Logo/database/logo_mongodb.svg" />MongoDB</li>
-                                <li><img src="assets/Image/Logo/database/logo_sqlserver.svg" />SQL SERVER</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>SOFTWARE TOOLS</h3>
-                            <ul class="skill-list">
-                                <li><img src="assets/Image/Logo/tools/logo_vscommunity.svg" />VS Community</li>
-                                <li><img src="assets/Image/Logo/tools/logo_vscode.svg" />VS Code</li>
-                                <li><img src="assets/Image/Logo/tools/logo_androidstudio.svg" />Android Studio</li>
-                                <li><img src="assets/Image/Logo/tools/logo_figma.svg" />Figma</li>
-                                <li><img src="assets/Image/Logo/tools/logo_git.svg" />GitHub</li>
-                                <li><img src="assets/Image/Logo/tools/logo_insomnia.svg" />Insomnia</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="certificates-grid">
-                        <h3>
-                            <p class="subHeader-1">CERTIFICATES</p>
-                        </h3>
-                        <div class="certificates-category">
-                            <ul class="certificates-list">
-                                <li><img src="assets/Image/Certificates/CompTIA IT Fundamentals (ITF+).jpg"
-                                        alt="CompTIA" /></li>
-                                <li><img src="assets/Image/Certificates/Open RAN.png" alt="Open RAN" /></li>
-                                <li><img src="assets/Image/Certificates/WearOS.png" alt="WearOS" /></li>
-                                <li><img src="assets/Image/Certificates/Cybercaravan.jpg" alt="Cybercaravan" /></li>
-                                <li><img src="assets/Image/Certificates/Cybersecurity.jpg" alt="Cybersecurity" /></li>
-                                <li><img src="assets/Image/Certificates/AWS.jpg" alt="AWS" /></li>
-                                <li><img src="assets/Image/Certificates/IntroToIOT.jpg" alt="IntroToIOT" /></li>
-                                <li><img src="assets/Image/Certificates/IntroToNetwork.jpg" alt="IntroToNetwork" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="projects">
-                    <h2> <span>
-                            <p class="subHeader-2">-Checkout my Projects-</p>
-                        </span>MY PROJECTS</h2>
-                    <div class="projects-grid">
-                    </div>
-                    <a id="show-btn" href="projects.html">SHOW ALL</a>
-                </section>
-
-                <section id="contacts">
-                    <div class="card">
-                        <h2> <span>
-                                <p class="subHeader-2">-Let's Connect-</p>
-                            </span>Contacts</h2>
-                        <div class="contacts-content">
-                            <!-- <div class="contacts-image-placeholder"><img src="assets/Image/p.png"
-                                    alt="Image Place Holder" />
-                            </div> -->
-                            <div class="contacts-info">
-                                <p><b>EMAIL:</b> <a href="mailto:reinerrvaldez@gmail.com">reinerrvaldez@gmail.com</a>
-                                </p>
-                                <p><b>PHONE:</b> (+63)9196007012</p>
-                                <p><b>ADDRESS:</b> Sta. Rosa, Laguna, Philippines</p>
-                                <a id="linkedIn-link" href="https://www.linkedin.com/in/reiner-valdez-1aa485344/"
-                                    target="_blank"><img src="assets/Image/Icon/linkedin.png"></a>
-                                <!-- <button id="contacts-btn">Contact Me</button> -->
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-
-
-                <!-- MODAL: PROJECT -->
-                <div id="project-modal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <h4 id="project-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="projectModal-text">
-                                <h3>Description:</h3>
-                                <p id="project-desc"></p>
-                                <h3>Software Tools:</h3>
-                                <ul id="project-tools"></ul>
-                            </div>
-                            <div id="project-images" class="projectModal-image-placeholder">
-                                x
-                            </div>
-                        </div>
-                        <!-- <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div> -->
-                    </div>
-                </div>
-
-                <!--MODAL: ENLARGE-->
-                <div id="enlarge-modal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-body">
-                            <img id="enlarge-img" class="enlargeModal-image" />
-                        </div>
-                        <!-- <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div> -->
-                    </div>
-                </div>
-            </main>
+            <button class="theme-toggle curtain-menu__content" title="toggle theme" onclick="toggleTheme()">
+                <span class="theme-toggle__icon">&#x1F319;</span>
+            </button>
         </div>
-        <footer>
-            <p>&copy; 2025 Reiner Gabrielle R. Valdez. All rights reserved.</p>
-        </footer>
+    </header>
 
-        <script src="main.js"></script>
-        <script src="themeToggle.js"></script>
-    </div>
+
+
+    <main class="page-border pattern">
+        <section id="hero" class="section hero__section">
+            <p class="hero__greeting">Greetings! :> My Name is</p>
+            <h1 class="hero__name">REINER GABRIELLE R. VALDEZ</h1>
+            <p class="hero__summary">An aspiring <span class="highlight">Web Developer</span class="highlight">
+                dedicated to crafting <span class="highlight">impactful
+                    visual
+                    experiences </span class="highlight">and
+                <span class="highlight">user-friendly websites</span class="highlight">. I am committed to developing
+                <span class="highlight">efficient,
+                    functional,</span class="highlight"> and <span class="highlight">visually appealing</span
+                    class="highlight">
+                digital solutions that <span class="highlight">captivate users</span class="highlight">.
+            </p>
+            <div class="hero__actions"> <!--Button Link?-->
+                <a class="hero__action-btn" href="assets/documents/CV-Reiner_Gabrielle_R_Valdez.pdf"
+                    target="_blank">Download CV</a>
+                <a class="hero__action-btn" href="#contacts">CONTACTS</a>
+            </div>
+            <div class="hero__socials">
+                <a class="hero__social-link" href="" target="_blank" rel="noopener noreferrer"><img
+                        class="hero__social-icon" src="assets/icons/media/ic_linkedin.png" alt="Linked In Profile"
+                        title="Linked In Profile"></a>
+                <a class="hero__social-link" href="" target="_blank" rel="noopener noreferrer"><img
+                        class="hero__social-icon" src="assets/icons/media/ic_github.png" alt="Github Profile"
+                        title="Github Profile"></a>
+            </div>
+        </section>
+        <section id="about" class="section about__section">
+            <p class="section__caption">&#x27E1; Get to know me &#x27E1;</p>
+            <h2 class="section__title">ABOUT ME</h2>
+            <div class="section__content">
+                <div class="section__items about__infos">
+                    <article class="about__card">
+                        <img class="about__icon" src="assets/icons/ic_profile.png" alt="">
+                        <p class="about__text">An IT graduate with a strong passion in Web development. I am excited to
+                            bring a digital ideas to life, focusing on both visual appeal and highly functional user
+                            experiences. My goal is to develop a solution that is not only efficient but also genuinely
+                            captivating for users.
+                        </p>
+                        <span class="sparkle hidden">&#x2726;</span>
+                    </article>
+                    <article class="about__card">
+                        <img class="about__icon" src="assets/icons/ic_goal.png" alt="">
+                        <p class="about__text">
+                            My academics focus has been on software development, data structures and system design. Over
+                            the past few years, I have gained various hands-on experience across various domains
+                            including websites, mobile application, databases and backends. I constantly eager to
+                            explore and learn new tools and techniques expanding my skills and knowledge to apply an
+                            innovative and intuitive approach to a real-world challenges. My aim is always create great
+                            user interface and a robust backend that deliver a better experience for users.
+                        </p>
+                        <span class="sparkle hidden">&#x2726;</span>
+                    </article>
+                    <article class="about__card">
+                        <img class="about__icon" src="assets/icons/ic_interest.png" alt="">
+                        <p class="about__text"><!--**EDIT: CONTENT-->
+                            Beyond the code, I have several hobbies and seeks improvement on skills. I'm an avid reader
+                            of mystery, thriller and comedy genres and I enjoy playing casual games such as puzzles,
+                            strategy, and casual. I'm also keen on developing my drawing skills, as I currently only
+                            sketch. I believe these hobbies collectively fuels my creativity and enhance my problem
+                            solving approach in web development. I am actively seeking for entry level web developer
+                            roles where i can contribute professionally and grow into a full-fledge developer. I am
+                            excited to collaborate on projects that push boundaries and make tangible impact.</p>
+                        <span class="sparkle hidden">&#x2726;</span>
+
+                    </article>
+
+                </div>
+                <div class="section__items about__profile">
+                    <img class="about__profile-layer" src="assets/images/profile/layer-0.webp"
+                        alt="profile background" />
+                    <img class="about__profile-layer" src="assets/images/profile/layer-1.webp"
+                        alt="profile background" />
+                    <img class="about__profile-layer visible" src="assets/images/profile/layer-2-c0.webp"
+                        alt="profile avatar thinking" />
+                    <img class="about__profile-layer visible" src="assets/images/profile/layer-2-d0.webp"
+                        alt="profile avatar waving" />
+                    <img class="about__profile-layer hidden" src="assets/images/profile/layer-2-c1.webp"
+                        alt="profile dialogue thinking:hmmm" />
+                    <img class="about__profile-layer hidden" src="assets/images/profile/layer-2-d1.webp"
+                        alt="profile dialogue waving:hello :>" />
+                    <img class="about__profile-layer" src="assets/images/profile/layer-3.webp" alt="profile tablet" />
+                    <img class="about__profile-layer" src="assets/images/profile/layer-4.webp" alt="profile laptop" />
+                    <img class="about__profile-layer" src="assets/images/profile/layer-5.webp" alt="profile interest" />
+                    <img class="about__profile-layer" src="assets/images/profile/layer-6.webp" alt="profile sparkles" />
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section skills__section">
+            <p class="section__caption">&#x27E1; Overview of My Technological Abilities &#x27E1;</p>
+            <h2 class="section__title">MY SKILLS</h2>
+            <div class="section__content">
+                <h3 class="skills__caption">TECHNOLOGIES I USE</h3>
+
+                <div class="skills__categories">
+                    <details class="skills__category" open>
+                        <summary>PROGRAMMING LANGUAGES</summary>
+                        <ul class="skills__list">
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/program_lang/ic_csharp.svg" alt="c sharp"><span>C#</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/program_lang/ic_dart.svg" alt="dart"><span>Dart</span></li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/program_lang/ic_js.svg"
+                                    alt="javascript"><span>Javascript</span></li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/program_lang/ic_php.svg" alt="php"><span>Php</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/program_lang/ic_python.svg" alt="python"><span>Python</span>
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="skills__category">
+                        <summary>DATABASES</summary>
+                        <ul class="skills__list">
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/databases/ic_mongodb.svg" alt="mongoDB"><span>MongoDB</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/databases/ic_mysql.svg" alt="mySql"><span>MySQL</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/databases/ic_sqlserver.svg" alt="javascript"><span>SQL
+                                    Server</span></li>
+                        </ul>
+                    </details>
+                    <details class="skills__category">
+                        <summary>SOFTWARE TOOLS</summary>
+                        <ul class="skills__list">
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_vscode.svg" alt="VS Code"><span>VS
+                                    Code</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_vscommunity.svg"
+                                    alt="VS Community"><span>VS Community</span></li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_androidStudio.svg"
+                                    alt="Android Studio"><span>Android Studio</span></li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_figma.svg" alt="php"><span>Php</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_github.svg"
+                                    alt="Github"><span>Github</span>
+                            </li>
+                            <li class="skills__item"><img class="skills__icon"
+                                    src="assets/icons/tools/software_tools/ic_insomnia.svg"
+                                    alt="ic_insomnia"><span>insomnia</span>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+                <h3 class="skills__caption">CERTIFICATIONS</h3>
+                <div class="certificates__category">
+                    <ul class="certificates__list">
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/CompTIA_IT_Fundamentals_(ITF+).webp" alt="CompTIA" />
+                        </li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/HTML_essential.webp" alt="HTML Essential" />
+                        </li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/CSS_essential.webp" alt=" CSS Essential" />
+                        </li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/AWS.webp" alt="AWS" />
+                        </li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/GoogleIT.webp" alt="GoogleIT Support" /></li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/Open RAN.webp" alt="Open RAN" /></li>
+                        <li class="certificates__item"><img class="certificates__img enlarge-image"
+                                src="assets/certificates/WearOS.webp" alt="WearOS" /></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section projects__section">
+            <p class="section__caption">&#x27E1; Checkout my Projects &#x27E1;</p>
+            <h2 class="section__title">MY PROJECTS</h2>
+
+            <div class="section__content">
+                <div class="projects__grid">
+                </div>
+            </div>
+        </section>
+        <section id="contacts" class="section contacts__section">
+            <p class="section__caption">&#x27E1; Lets' Connect &#x27E1;</p>
+            <h2 class="section__title">CONTACTS</h2>
+            <div class="section__content">
+                <div itemscope itemtype="http://schema.org/Person" class="contacts__details">
+                    <meta itemprop="name" content="Reiner Valdez">
+                    <meta itemprop="jobTitle" content="Junior Web Developer">
+                    <meta itemprop="jobTitle" content="Software Developer">
+                    <meta itemprop="jobTitle" content="IT Professional">
+                    <p class="contacts__item"><img class="contacts__socials-icons"
+                            src="assets/icons/media/ic_email.png"><strong>EMAIL:</strong><a itemprop="email"
+                            class="contacts__socials-links"
+                            href="mailto:reinerrvaldez@gmail.com">reinerrvaldez@gmail.com</a></p>
+                    <p class="contacts__item"> <img class="contacts__socials-icons"
+                            src="assets/icons/media/ic_phone.png"><strong>PHONE:</strong><span
+                            itemprop="telephone">(+63)9196007012</span>
+                    </p>
+                    <p class="contacts__item"><img class="contacts__socials-icons"
+                            src="assets/icons/media/ic_pin.png"><strong>ADDRESS:</strong><span itemprop="address"
+                            itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Sta.
+                                Rosa</span>, <span itemprop="addressRegion">Laguna, Philippines</span></span></p>
+                    <p><a itemprop="url" class="contacts__item contacts_socials-links"
+                            href="https://www.linkedin.com/in/reiner-valdez-1aa485344/" target="_blank">
+                            <img class="contacts__socials-icons" src="assets/icons/media/ic_linkedin.png"></a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Reiner Gabrielle R. Valdez. All rights reserved.</p>
+    </footer>
+
+    <!--MODAL-->
+    <dialog id="modal-project" class="modal">
+        <div class="modal__header">
+            <h4 class="modal__title projects__title"></h4>
+            <button class="modal__close" aria-label="close modal">&times;</button>
+        </div>
+        <div class="modal__body page-border">
+            <div class="modal__info">
+                <p class="modal__label"><strong>DESCRIPTION:</strong></p>
+                <p class="modal__text projects__text"></p>
+                <p class="modal__label"><strong>SOFTWARE TOOLS:</strong></p>
+                <ul class="modal__list projects__list"></ul>
+                <div class="modal__links"> <a class="modal__item link__github" target="_blank"
+                        rel="noopener noreferrer"><img class="modal__icons" src="assets/icons/media/ic_github.png"></a>
+                    <a class="modal__item link__website" target="_blank" rel="noopener noreferrer"><img
+                            class="modal__icons" src="assets/icons/media/ic_www.png"></a>
+                </div>
+
+            </div>
+            <div class="modal__media">
+                <!-- <img class="modal_img"> -->
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-zoom" class="modal">
+        <div class="modal__header">
+            <button class="modal__close" aria-label="close modal">&times;</button>
+        </div>
+        <div class="modal__media">
+            <img class="modal__image">
+        </div>
+    </dialog>
+
+    <!--JAVASCRIPT-->
+    <script src="js/profile-interaction.js"></script>
+    <script src="js/projects.js" type="module"></script>
+    <script src="js/modal.js" type="module"></script>
+    <script src="js/toggle.js"></script>
 </body>
-
 <script>
     var loadingScreen = document.querySelector(".loadingScreen");
     var displayPre;
 
     window.addEventListener('load', function () {
         if (!sessionStorage.getItem('loaded')) {
+            // First time visiting this session
             displayPre = setTimeout(showPage, 3000);
             sessionStorage.setItem('loaded', 'true');
         } else {
-            document.querySelector('.loadingScreen').style.display = 'none';
+            // Already visited - hide loader and UNLOCK scroll immediately
+            loadingScreen.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
-    })
+    });
 
     function showPage() {
         loadingScreen.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
     }
 </script>
 
