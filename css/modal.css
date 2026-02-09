@@ -31,6 +31,7 @@
   flex-direction: column;
   gap: 1em;
 }
+
 .modal__links {
   width: fit-content;
 }
@@ -42,7 +43,11 @@
 }
 
 .modal__media {
-  max-width: 25rem;
+  max-width: 50rem;
+}
+#modal-project .modal__media {
+  border: solid 3px var(--primary);
+  padding: 0.5rem;
 }
 
 .modal__image {
@@ -65,19 +70,18 @@
 }
 
 .swiper__images {
-  position: relative;
-  width: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 400px;
 }
 
 .swiper__image {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 10px;
 }
 
 /* Navigation Buttons */
@@ -136,6 +140,11 @@
 }
 
 @media (min-width: 768px) {
+  #modal-project {
+    max-width: 80rem;
+    min-height: 35rem;
+    padding: 1rem;
+  }
   .modal__header .projects__title {
     font-size: 1.5rem;
   }
@@ -150,8 +159,7 @@
   .modal__text {
     font-size: 1rem;
   }
-
   .modal__media {
-    max-width: 50rem;
+    min-width: 30rem;
   }
 }

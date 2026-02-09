@@ -12,40 +12,40 @@ const projects = {
         website:"https://reiner-v.github.io/"
     },
      "project-4":{
-        title: "iNeed PARKING APPLICATION",
-        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
-        tools:[ "Android Studio", "Visual Studio Code","MVC","Flutter","Dart","C#","MongoDB"],
+        title: "INEED PARKING APPLICATION",
+        description:"Developed a full-stack parking management suite utilizing a RESTful API architecture to synchronize data across a Flutter mobile app and a C# web dashboard. Implemented automated user session control and secure payment workflows, while integrating SignalR for real-time chat communication. Leveraged MVC patterns and MongoDB to ensure a scalable, data-driven experience for both users and administrators.",
+        tools:[ "Android Studio", "Visual Studio Code","MVC","SignalR","Flutter","Dart","C#","MongoDB"],
         images:["assets/projects/project-4/0.webp","assets/projects/project-4/1.webp","assets/projects/project-4/2.webp","assets/projects/project-4/3-1.webp","assets/projects/project-4/3-2.webp","assets/projects/project-4/3-3.webp"],
         github:"",
         website:""
     },
     "project-3":{
         title: "IOT BASED AIR QUALIT MONITORING SYSTEM",
-        description:"This Project's objective is to monitor and track the air quality within the cabuyao using a device and web application. It contains various sensors like DHT, MQ Series and gps module.",
-        tools:[ "Visual Studio Code","Arduino IDE","HTML","CSS","Javascript","C++" ],
+        description:"Developed an interactive IoT web application to monitor real-time air quality across Cabuyao. Integrated data from hardware sensors (DHT, MQ Series, GPS) into a dynamic map interface, allowing users to track environmental metrics based on precise device locations. Built using a RESTful architecture and hosted on Hostinger, the system synchronizes C++ sensor data with a JavaScript frontend to provide instant, location-based insights.",
+        tools:[ "Visual Studio Code","Arduino IDE","HTML","CSS","Javascript","C++","Php","SQL" ],
         images:["assets/projects/project-3/0.webp","assets/projects/project-3/1.webp","assets/projects/project-3/2.webp","assets/projects/project-3/3.webp","assets/projects/project-3/4.webp","assets/projects/project-3/5.webp","assets/projects/project-3/6.webp"],
         github:"",
         website:""
     },
     "project-2":{
         title: "SMART ACCESS CONTROL AND MONITORING SYSTEM",
-        description:"This project incorporates an RFID sensor and key to authenticate authorized persons within an establishment. When an authorized UID is scanned by the RFID, a green light will turn on. If the sensor detects an unauthorized attempt, a red light will turn on, and the alarm system will engage.",
-        tools:["Visual Studio Community","xampp","Arduino IDE","C#","XML","Php","MySQL"],
+        description:"Developed a mobile-integrated security system that authenticates personnel via RFID technology. Engineered a C# mobile application that interfaces with a MySQL database through a PHP API to validate credentials in real-time. The system features an automated hardware response for access control (LED/Alarm) and provides administrators with a mobile interface to monitor entry logs and manage authorized UIDs.",
+        tools:["Visual Studio Community","XAMPP","Arduino IDE","C#","Xamarin","Php","MySQL"],
         images:["assets/projects/project-2/0.webp","assets/projects/project-2/1.webp","assets/projects/project-2/2.webp","assets/projects/project-2/3.webp","assets/projects/project-2/4.webp","assets/projects/project-2/5.webp"],
          github:"https://github.com/reiner-v/mobile-control-monitoring-system.git",
          website:""
     },
     "project-1":{
         title: "LEHITIMO: Get that Salary",
-        description:"This Project will allow the admin to create and update the employees information including name, roles, salary and such. They will be also to search for a specific employee also delete an employee.",
-        tools:["Visual Studio Community","xampp","Arduino IDE","C#","XML","Php","MySQL"],
+        description:"Developed a centralized administrative system for workforce management, featuring full CRUD functionality. Engineered a RESTful API using PHP to bridge the C# (Xamarin) interface with a MySQL database, allowing for secure real-time updates of employee profiles, roles, and salary data. This project highlights my ability to build scalable data structures and efficient search algorithms for business applications.",
+        tools:["Visual Studio Community","XAMPP","Arduino IDE","C#","Xamarin","Php","MySQL"],
         images:["assets/projects/project-1/0.webp","assets/projects/project-1/1.webp","assets/projects/project-1/2.webp","assets/projects/project-1/3.webp","assets/projects/project-1/4.webp","assets/projects/project-1/5.webp","assets/projects/project-1/6.webp","assets/projects/project-1/7.webp","assets/projects/project-1/8.webp"],
          github:"https://github.com/reiner-v/simple-mobile-employee-management-system.git",
          website:""
     },
     "project-0":{
         title: "RENTALIGHT: ONLINE RESERVATION",
-        description:"This Online Application and Reservation System simplifies finding and booking properties. Clients can easily register, find properties, make reservations, manage cancellations, and track their booking status.",
+        description:"Developed a comprehensive web-based platform designed to streamline the property booking and reservation process. I engineered a robust backend using ASP.NET and C#, implementing full user lifecycle features—from secure registration and property filtering to reservation management and real-time status tracking. Utilizing a MySQL database, the system ensures data integrity for bookings, cancellations, and client information.",
         tools:["Visual Studio Community","C#","MySQL","ASP.NET"],
         images:["assets/projects/project-0/0.webp","assets/projects/project-0/1.webp","assets/projects/project-0/2.webp"],
          github:"",
@@ -121,6 +121,7 @@ function attachProjectDetails(){
                     githubLink.setAttribute('aria-disabled','true');
                 }
                 else{
+                    githubLink.classList.remove("hidden");
                     githubLink.href=project.github;
                 }
 
@@ -129,6 +130,7 @@ function attachProjectDetails(){
                     webLink.setAttribute('aria-disabled','true');
                 }
                 else{
+                    webLink.classList.remove("hidden");
                     webLink.href=project.website;
                 }
                 
