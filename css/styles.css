@@ -123,6 +123,37 @@ main {
 .page-border {
   border: 3px solid var(--primary);
 }
+.border-pattern {
+  writing-mode: horizontal-tb;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.border-text {
+  position: absolute;
+  writing-mode: vertical-lr;
+  color: var(--primary);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  background-color: var(--bg-default);
+}
+.text-position__top-1 {
+  top: 120px;
+}
+.text-position__top-2 {
+  top: 560px;
+}
+.text-position__top-3 {
+  top: 860px;
+}
+.text-position__right {
+  right: 5px;
+}
+.text-position__left {
+  left: 5px;
+}
 
 .page-layout {
   display: flex;
@@ -289,7 +320,7 @@ main {
 }
 
 .about__text {
-  line-height: 20px;
+  line-height: 22px;
 }
 
 .about__profile {
@@ -331,7 +362,7 @@ main {
   letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
-  margin: 0.2em;
+  margin: 0.2em 0;
   text-align: left;
   list-style: none;
   background-color: rgba(115, 83, 186, 0.8);
@@ -525,6 +556,7 @@ main {
   border-radius: 4px;
   padding: 2rem;
   box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.1);
+  transition: transform ease 0.5s;
 }
 
 .contacts__item {
@@ -562,8 +594,51 @@ main {
   transform: scale(1.1);
 }
 
+/*ANIMATION*/
+.contacts__section {
+  position: relative;
+  overflow: hidden;
+}
+.contacts__section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 200%;
+  opacity: 0;
+  transform: skewX(-40deg);
+
+  background: rgba(147, 80, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(147, 80, 255, 0.13) 0%,
+    rgba(147, 80, 255, 0.13) 77%,
+    rgba(147, 80, 255, 0.5) 92%,
+    rgba(147, 80, 255, 0) 100%
+  );
+  transition: none;
+}
+.contacts__section:hover:after {
+  opacity: 1;
+  left: 100%;
+  transition: left 1s cubic-bezier(0.7, 0.7, 0.15, 1);
+}
+.contacts__section:hover {
+  transform: scale(1.05);
+}
+.contacts__section:active:after {
+  opacity: 0;
+}
+
 /*Desktop*/
 @media (min-width: 768px) {
+  .text-position__right {
+    right: 20px;
+  }
+  .text-position__left {
+    left: 20px;
+  }
   /*CONTENT=================*/
   main {
     margin: 0.5em 2em;
@@ -614,12 +689,13 @@ main {
     flex-direction: row;
   }
   .about__card {
-    padding: 0.8em 2em;
+    padding: 2em;
     font-size: 0.8rem;
     flex-direction: row;
     align-items: center;
   }
   .about__card:hover {
+    box-shadow: 8px 8px var(--highlight-green);
     transform: translateX(20px);
   }
   .about__card:hover .about__icon {
