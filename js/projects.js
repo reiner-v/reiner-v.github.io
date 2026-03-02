@@ -20,7 +20,7 @@ const projects = {
         website:""
     },
     "project-3":{
-        title: "IOT BASED AIR QUALIT MONITORING SYSTEM",
+        title: "IOT BASED AIR QUALITY MONITORING SYSTEM",
         description:"Developed an interactive IoT web application to monitor real-time air quality across Cabuyao. Integrated data from hardware sensors (DHT, MQ Series, GPS) into a dynamic map interface, allowing users to track environmental metrics based on precise device locations. Built using a RESTful architecture and hosted on Hostinger, the system synchronizes C++ sensor data with a JavaScript frontend to provide instant, location-based insights.",
         tools:[ "Visual Studio Code","Arduino IDE","HTML","CSS","Javascript","C++","Php","SQL" ],
         images:["assets/projects/project-3/0.webp","assets/projects/project-3/1.webp","assets/projects/project-3/2.webp","assets/projects/project-3/3.webp","assets/projects/project-3/4.webp","assets/projects/project-3/5.webp","assets/projects/project-3/6.webp"],
