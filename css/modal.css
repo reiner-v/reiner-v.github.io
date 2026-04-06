@@ -2,7 +2,7 @@
 .modal {
   background-color: var(--bg-default);
   border: none;
-  border-radius: 1rem;
+  border-radius: 15px;
   padding: 1rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
@@ -14,22 +14,32 @@
 .modal__header {
   display: flex;
   justify-content: space-between;
+  /* font-family: "Chivo Mono", monospace; */
 }
 
 .modal__close {
   font-size: 2rem;
-  color: var(--text-color);
+  color: var(--secondary);
   border: none;
   background-color: transparent;
 }
 
 .modal__body {
   padding: 1rem;
+  border: 3px solid var(--primary);
+  border-radius: 15px;
 }
-.modal__info {
+.modal__details {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+.modal__label {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.modal__text {
+  font-size: 1rem;
 }
 
 .modal__links {
@@ -41,13 +51,14 @@
 .modal__icons {
   width: 32px;
 }
-
 .modal__media {
   max-width: 50rem;
 }
 #modal-project .modal__media {
-  border: solid 3px var(--primary);
-  padding: 0.5rem;
+  background-color: #e6ddce;
+  border: solid 4px var(--primary);
+  border-radius: 15px;
+  padding: 0.6rem;
 }
 
 .modal__image {
@@ -61,7 +72,9 @@
   max-width: 15rem;
   height: auto;
 }
-
+#modal-zoom .modal__header {
+  justify-content: end;
+}
 /*SWIPER*/
 .image-swiper {
   position: relative;
@@ -86,24 +99,25 @@
 
 /* Navigation Buttons */
 .swiper__btn {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  border: solid 4px var(--secondary);
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--secondary);
-  color: white;
-  border: none;
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  margin: auto;
-  cursor: pointer;
   z-index: 10;
   transition: background-color 0.3s ease;
 }
 
 .swiper__btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--secondary);
+  color: white;
 }
 
 .swiper__prev {
@@ -126,24 +140,27 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ddd;
+  border: solid 2px var(--secondary);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .swiper__dot.active {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .swiper__dot:hover {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 @media (min-width: 768px) {
+  .modal {
+    padding: 1.5rem;
+  }
+
   #modal-project {
     max-width: 80rem;
     min-height: 35rem;
-    padding: 1rem;
   }
   .modal__header .projects__title {
     font-size: 1.5rem;
@@ -151,15 +168,14 @@
   .modal__body {
     display: flex;
     gap: 5rem;
-    padding: 2.5rem;
+    padding: 3.7rem 3.1rem;
   }
-  .modal__info {
+  .modal__details {
     gap: 2rem;
-  }
-  .modal__text {
-    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
   }
   .modal__media {
-    min-width: 30rem;
+    width: 100%;
   }
 }

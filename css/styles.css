@@ -44,7 +44,6 @@
 }
 html {
   background: var(--bg-default);
-  user-select: none;
   background: var(--bg-gradient) no-repeat;
 }
 body {
@@ -112,7 +111,10 @@ a {
   font-weight: 700;
   font-style: normal;
 }
-/*NOTE: Download semibold*/
+
+h4 {
+  margin: 0;
+}
 
 /*CONTENT=================*/
 main {
@@ -456,7 +458,7 @@ main {
 .projects__card {
   background-color: var(--bg-default);
   border: 0.15rem solid var(--secondary);
-  padding: 0.2rem;
+  /* padding: 0.2rem; */
   box-shadow: 4px 8px 0px var(--highlight-green);
   transition: transform 0.3s ease;
 }
@@ -523,7 +525,7 @@ main {
 .projects__item {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
-  color: var(--text-color);
+  color: white;
   background-color: var(--secondary);
   border-radius: 5px;
   padding: 0.3rem 0.5rem;
@@ -535,14 +537,16 @@ main {
 }
 
 .projects__view-btn {
-  font-size: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--bg-default);
   background-color: var(--secondary); /* Violet background */
   border: none;
   border-radius: 2px;
-  float: right;
-  margin: 1rem 0.5rem 0.5rem 0;
+  /* float: right; */
+  width: 100%;
+  margin: 1rem 0 0.5rem 0;
   padding: 0.5em 1em;
   transition: background-color 0.3s ease;
 }

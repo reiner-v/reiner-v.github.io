@@ -2,12 +2,13 @@
 
 header {
   background-color: var(--bg-default);
-  padding: 0.8em 1em;
+  padding: 0.8rem 2rem;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 /*NOTE: Animate hover name*/
@@ -26,7 +27,6 @@ header {
 .brand__logo {
   width: 2em;
   height: auto;
-  margin-right: 0.5em;
 }
 
 .menu-toggle {
@@ -152,10 +152,10 @@ header {
   }
 
   .brand__logo {
-    width: 2.5em;
+    width: 2.25rem;
   }
   .brand__name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .brand__name--short {
     display: none;
@@ -193,6 +193,6 @@ header {
     margin-right: 1em;
   }
   .navbar__link {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
